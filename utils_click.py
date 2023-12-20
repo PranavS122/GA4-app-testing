@@ -1,4 +1,4 @@
-import re, os
+import re, os, subprocess
 import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,10 +6,8 @@ from selenium.webdriver.common.by import By
 from seleniumwire import webdriver
 import chromedriver_autoinstaller
 
-
-chrome_folder_path = os.path.join(os.path.dirname(__file__), "chrome")
-
-os.environ["PATH"] += os.pathsep + chrome_folder_path
+chrome_installer_path = os.path.join(os.path.dirname(__file__), 'chrome.exe')
+subprocess.run([chrome_installer_path, '--silent', '--install'])
 
 chromedriver_autoinstaller.install()
 
