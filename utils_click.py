@@ -9,10 +9,6 @@ import chromedriver_autoinstaller
 
 chrome_folder_path = os.path.join(os.path.dirname(__file__), "chrome")
 
-
-chrome_path = os.path.join(chrome_folder_path, "chrome.exe")
-
-
 os.environ["PATH"] += os.pathsep + chrome_folder_path
 
 chromedriver_autoinstaller.install()
