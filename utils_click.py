@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from seleniumwire import webdriver
 import chromedriver_autoinstaller
 
-chrome_installer_path = './chrome/chrome.exe'
+chrome_installer_path = os.path.join(os.path.dirname(__file__), 'chrome.exe')
 subprocess.run([chrome_installer_path, '--silent', '--install'])
 
 chromedriver_autoinstaller.install()
