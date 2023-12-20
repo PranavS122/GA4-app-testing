@@ -15,7 +15,7 @@ chrome_path = os.path.join(chrome_folder_path, "chrome.exe")
 
 os.environ["PATH"] += os.pathsep + chrome_folder_path
 
-chromedriver_autoinstaller.install(chrome_path=chrome_path)
+chromedriver_autoinstaller.install()
 
 class PageClick():
 
